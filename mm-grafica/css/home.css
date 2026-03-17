@@ -260,12 +260,15 @@
   position: relative;
   overflow: hidden;
   background: var(--light-gray);
+  display: block;
 }
 .feat-card__thumb img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
+  position: absolute;
+  top: 0; left: 0;
   transition: transform .4s ease;
 }
 .feat-card:hover .feat-card__thumb img { transform: scale(1.06); }

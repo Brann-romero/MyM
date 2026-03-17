@@ -22,7 +22,7 @@ const HEADER_HTML = `
         <div class="nav-dropdown__menu">
           <button onclick="navigate('productos','carteles')">Carteles</button>
           <button onclick="navigate('productos','estructuras')">Estructuras</button>
-          <button onclick="navigate('productos','remeras')">Remeras</button>
+          <button onclick="navigate('productos','estampados')">Estampados</button>
           <button onclick="navigate('productos','talonarios')">Talonarios</button>
           <button onclick="navigate('productos','tarjetas')">Tarjetas</button>
           <button onclick="navigate('productos','libretas')">Libretas</button>
@@ -50,7 +50,7 @@ const FOOTER_HTML = `
         <ul>
           <li><a onclick="navigate('productos','carteles')">Carteles</a></li>
           <li><a onclick="navigate('productos','estructuras')">Estructuras</a></li>
-          <li><a onclick="navigate('productos','remeras')">Remeras</a></li>
+          <li><a onclick="navigate('productos','estampados')">Estampados</a></li>
           <li><a onclick="navigate('productos','talonarios')">Talonarios</a></li>
           <li><a onclick="navigate('productos','tarjetas')">Tarjetas</a></li>
           <li><a onclick="navigate('productos','libretas')">Libretas</a></li>

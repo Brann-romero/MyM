@@ -197,8 +197,6 @@ input, select, textarea { font-family: var(--fb); }
   display: block;
   object-fit: contain;
   margin-bottom: 14px;
-  filter: brightness(0) invert(1);
-  opacity: .85;
 }
 
 /* Nav */

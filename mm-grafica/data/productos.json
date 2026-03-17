@@ -54,41 +54,43 @@
         { "id": "estructura-2", "nombre": "Estructura publicitaria", "imagen": "img/estructuras/estructura-2.jpeg" },
         { "id": "estructura-3", "nombre": "Estructura publicitaria", "imagen": "img/estructuras/estructura-3.jpeg" },
         { "id": "estructura-4", "nombre": "Estructura publicitaria", "imagen": "img/estructuras/estructura-4.jpeg" },
-        { "id": "estructura-5", "nombre": "Estructura publicitaria", "imagen": "img/estructuras/estructura-5.jpeg" }
+        { "id": "estructura-5", "nombre": "Estructura publicitaria", "imagen": "img/estructuras/estructura-5.jpeg" },
+        { "id": "estructura-6", "nombre": "Estructura publicitaria", "imagen": "img/estructuras/estructura-6.jpeg" }
       ]
     },
     {
-      "id": "remeras",
-      "nombre": "Remeras",
-      "descripcion": "Remeras estampadas con tu diseño. Sublimación total o estampado parcial. Ideales para equipos, eventos y uniformes.",
+      "id": "estampados",
+      "nombre": "Estampados",
+      "descripcion": "Estampados personalizados en remeras, buzos y más. Sublimación total o parcial. Ideales para equipos, eventos y uniformes.",
       "icono": "👕",
       "color": "#18201a",
       "badge": "Popular",
       "tags": ["Sublimación", "Estampado", "Uniformes", "Eventos"],
       "productos": [
-        { "id": "remera-1",  "nombre": "Remera estampada", "imagen": "img/remeras/remera-1.jpeg"  },
-        { "id": "remera-2",  "nombre": "Remera estampada", "imagen": "img/remeras/remera-2.jpeg"  },
-        { "id": "remera-3",  "nombre": "Remera estampada", "imagen": "img/remeras/remera-3.jpeg"  },
-        { "id": "remera-4",  "nombre": "Remera estampada", "imagen": "img/remeras/remera-4.jpeg"  },
-        { "id": "remera-5",  "nombre": "Remera estampada", "imagen": "img/remeras/remera-5.jpeg"  },
-        { "id": "remera-6",  "nombre": "Remera estampada", "imagen": "img/remeras/remera-6.jpeg"  },
-        { "id": "remera-7",  "nombre": "Remera estampada", "imagen": "img/remeras/remera-7.jpeg"  },
-        { "id": "remera-8",  "nombre": "Remera estampada", "imagen": "img/remeras/remera-8.jpeg"  },
-        { "id": "remera-9",  "nombre": "Remera estampada", "imagen": "img/remeras/remera-9.jpeg"  },
-        { "id": "remera-10", "nombre": "Remera estampada", "imagen": "img/remeras/remera-10.jpeg" },
-        { "id": "remera-11", "nombre": "Remera estampada", "imagen": "img/remeras/remera-11.jpeg" },
-        { "id": "remera-12", "nombre": "Remera estampada", "imagen": "img/remeras/remera-12.jpeg" },
-        { "id": "remera-13", "nombre": "Remera estampada", "imagen": "img/remeras/remera-13.jpeg" },
-        { "id": "remera-14", "nombre": "Remera estampada", "imagen": "img/remeras/remera-14.jpeg" },
-        { "id": "remera-15", "nombre": "Remera estampada", "imagen": "img/remeras/remera-15.jpeg" },
-        { "id": "remera-16", "nombre": "Remera estampada", "imagen": "img/remeras/remera-16.jpeg" },
-        { "id": "remera-17", "nombre": "Remera estampada", "imagen": "img/remeras/remera-17.jpeg" },
-        { "id": "remera-18", "nombre": "Remera estampada", "imagen": "img/remeras/remera-18.jpeg" },
-        { "id": "remera-19", "nombre": "Remera estampada", "imagen": "img/remeras/remera-19.jpeg" },
-        { "id": "remera-20", "nombre": "Remera estampada", "imagen": "img/remeras/remera-20.jpeg" },
-        { "id": "remera-21", "nombre": "Remera estampada", "imagen": "img/remeras/remera-21.jpeg" },
-        { "id": "remera-22", "nombre": "Remera estampada", "imagen": "img/remeras/remera-22.jpeg" },
-        { "id": "remera-23", "nombre": "Remera estampada", "imagen": "img/remeras/remera-23.jpeg" }
+        { "id": "remera-portada", "nombre": "Remera estampada", "imagen": "img/estampados/remera-portada.jpeg" },
+        { "id": "remera-1",  "nombre": "Remera estampada", "imagen": "img/estampados/remera-1.jpeg"  },
+        { "id": "remera-2",  "nombre": "Remera estampada", "imagen": "img/estampados/remera-2.jpeg"  },
+        { "id": "remera-3",  "nombre": "Remera estampada", "imagen": "img/estampados/remera-3.jpeg"  },
+        { "id": "remera-4",  "nombre": "Remera estampada", "imagen": "img/estampados/remera-4.jpeg"  },
+        { "id": "remera-5",  "nombre": "Remera estampada", "imagen": "img/estampados/remera-5.jpeg"  },
+        { "id": "remera-6",  "nombre": "Remera estampada", "imagen": "img/estampados/remera-6.jpeg"  },
+        { "id": "remera-7",  "nombre": "Remera estampada", "imagen": "img/estampados/remera-7.jpeg"  },
+        { "id": "remera-8",  "nombre": "Remera estampada", "imagen": "img/estampados/remera-8.jpeg"  },
+        { "id": "remera-9",  "nombre": "Remera estampada", "imagen": "img/estampados/remera-9.jpeg"  },
+        { "id": "remera-10", "nombre": "Remera estampada", "imagen": "img/estampados/remera-10.jpeg" },
+        { "id": "remera-11", "nombre": "Remera estampada", "imagen": "img/estampados/remera-11.jpeg" },
+        { "id": "remera-12", "nombre": "Remera estampada", "imagen": "img/estampados/remera-12.jpeg" },
+        { "id": "remera-13", "nombre": "Remera estampada", "imagen": "img/estampados/remera-13.jpeg" },
+        { "id": "remera-14", "nombre": "Remera estampada", "imagen": "img/estampados/remera-14.jpeg" },
+        { "id": "remera-15", "nombre": "Remera estampada", "imagen": "img/estampados/remera-15.jpeg" },
+        { "id": "remera-16", "nombre": "Remera estampada", "imagen": "img/estampados/remera-16.jpeg" },
+        { "id": "remera-17", "nombre": "Remera estampada", "imagen": "img/estampados/remera-17.jpeg" },
+        { "id": "remera-18", "nombre": "Remera estampada", "imagen": "img/estampados/remera-18.jpeg" },
+        { "id": "remera-19", "nombre": "Remera estampada", "imagen": "img/estampados/remera-19.jpeg" },
+        { "id": "remera-20", "nombre": "Remera estampada", "imagen": "img/estampados/remera-20.jpeg" },
+        { "id": "remera-21", "nombre": "Remera estampada", "imagen": "img/estampados/remera-21.jpeg" },
+        { "id": "remera-22", "nombre": "Remera estampada", "imagen": "img/estampados/remera-22.jpeg" },
+        { "id": "remera-23", "nombre": "Remera estampada", "imagen": "img/estampados/remera-23.jpeg" }
       ]
     },
     {
@@ -141,13 +143,17 @@
       "badge": "Nuevo",
       "tags": ["Offset", "Digital", "Plastificado", "Mate", "Brillante"],
       "productos": [
-        { "id": "tarjeta-1", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-1.jpeg" },
-        { "id": "tarjeta-2", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-2.jpeg" },
-        { "id": "tarjeta-3", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-3.jpeg" },
-        { "id": "tarjeta-4", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-4.jpeg" },
-        { "id": "tarjeta-5", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-5.jpeg" },
-        { "id": "tarjeta-6", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-6.jpeg" },
-        { "id": "tarjeta-7", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-7.jpeg" }
+        { "id": "tarjeta-3",  "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-3.jpeg"  },
+        { "id": "tarjeta-6",  "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-6.jpeg"  },
+        { "id": "tarjeta-7",  "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-7.jpeg"  },
+        { "id": "tarjeta-8",  "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-8.jpeg"  },
+        { "id": "tarjeta-9",  "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-9.jpeg"  },
+        { "id": "tarjeta-10", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-10.jpeg" },
+        { "id": "tarjeta-11", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-11.jpeg" },
+        { "id": "tarjeta-12", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-12.jpeg" },
+        { "id": "tarjeta-13", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-13.jpeg" },
+        { "id": "tarjeta-14", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-14.jpeg" },
+        { "id": "tarjeta-15", "nombre": "Tarjeta personal", "imagen": "img/tarjetas/tarjeta-15.jpeg" }
       ]
     },
     {
@@ -185,7 +191,8 @@
       "badge": "Nuevo",
       "tags": ["Institucional", "Presentación", "Corporativo", "Full color"],
       "productos": [
-        { "id": "carpeta-1", "nombre": "Carpeta de presentación", "imagen": "img/carpetas/carpeta-1.jpeg" }
+        { "id": "carpeta-1", "nombre": "Carpeta de presentación", "imagen": "img/carpetas/carpeta-1.jpeg" },
+        { "id": "carpeta-2", "nombre": "Carpeta de presentación", "imagen": "img/carpetas/carpeta-2.jpeg" }
       ]
     },
     {
