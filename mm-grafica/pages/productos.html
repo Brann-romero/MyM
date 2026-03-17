@@ -1,0 +1,328 @@
+<!-- ═══════════════════════════════════════════════
+     pages/productos.html — Contenido de Productos
+     CSS: css/productos.css (cargado por router)
+     JS:  js/productos.js  (initProductos llamado por router)
+═══════════════════════════════════════════════ -->
+
+<div class="products-page">
+
+  <div class="breadcrumb">
+    <span class="bc-link" onclick="navigate('home')">Inicio</span>
+    <span>›</span>
+    <span class="bc-cur">Productos</span>
+  </div>
+
+  <div class="products-page__header">
+    <div>
+      <span class="label">Catálogo completo</span>
+      <h1 class="display-title">Productos</h1>
+      <p class="products-count" id="prodCount">49 productos encontrados</p>
+    </div>
+    <div class="sort-row">
+      <label for="sortSel">Ordenar por:</label>
+      <select class="sort-select" id="sortSel">
+        <option value="">Destacado</option>
+        <option value="az">A – Z</option>
+        <option value="za">Z – A</option>
+        <option value="nuevo">Más nuevos</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="products-layout">
+
+    <!-- ── SIDEBAR ── -->
+    <aside class="sidebar">
+
+      <div class="sb-section">
+        <div class="sb-title">Categorías <span class="sb-arrow">−</span></div>
+        <div class="sb-body">
+          <ul class="cat-filter-list" id="sbCatList">
+            <li><a data-cat="Todos" class="active">Todos los productos</a></li>
+            <li><a data-cat="Banners">Banners con portabanner</a></li>
+            <li><a data-cat="Graficas">Gráficas para colgar</a></li>
+            <li><a data-cat="Vidrios">Decoración de vidrios</a></li>
+            <li><a data-cat="PVC">Gráficas montadas en PVC</a></li>
+            <li><a data-cat="Senaletica">Señalética / Comunicación</a></li>
+            <li><a data-cat="Metro">Impresión por metro</a></li>
+            <li><a data-cat="Stickers">Stickers / Calcos</a></li>
+            <li><a data-cat="Digital">Impresión digital</a></li>
+            <li><a data-cat="Cuadros">Cuadros</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">Material <span class="sb-arrow">−</span></div>
+        <div class="sb-body">
+          <ul class="chk-list">
+            <li><label><input type="checkbox"> Vinilo Mate <span class="f-count">3</span></label></li>
+            <li><label><input type="checkbox"> Vinilo Brillante <span class="f-count">3</span></label></li>
+            <li><label><input type="checkbox"> Vinilo Transparente <span class="f-count">2</span></label></li>
+            <li><label><input type="checkbox"> Lona Frontlight <span class="f-count">2</span></label></li>
+            <li><label><input type="checkbox"> Lona Blackout <span class="f-count">1</span></label></li>
+            <li><label><input type="checkbox"> Canvas / Lienzo <span class="f-count">2</span></label></li>
+            <li><label><input type="checkbox"> Papel Fotográfico <span class="f-count">2</span></label></li>
+            <li><label><input type="checkbox"> Tela Bandera <span class="f-count">1</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">Tamaño <span class="sb-arrow">−</span></div>
+        <div class="sb-body">
+          <ul class="chk-list">
+            <li><label><input type="checkbox"> 60×160 cm <span class="f-count">2</span></label></li>
+            <li><label><input type="checkbox"> 90×190 cm <span class="f-count">6</span></label></li>
+            <li><label><input type="checkbox"> 85×200 cm <span class="f-count">1</span></label></li>
+            <li><label><input type="checkbox"> A4 / A5 <span class="f-count">4</span></label></li>
+            <li><label><input type="checkbox"> Por metro <span class="f-count">8</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">Terminación <span class="sb-arrow">−</span></div>
+        <div class="sb-body">
+          <ul class="chk-list">
+            <li><label><input type="checkbox"> Con laminado <span class="f-count">4</span></label></li>
+            <li><label><input type="checkbox"> Sin laminado <span class="f-count">6</span></label></li>
+            <li><label><input type="checkbox"> Simple faz <span class="f-count">5</span></label></li>
+            <li><label><input type="checkbox"> Doble faz <span class="f-count">3</span></label></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="sb-section">
+        <div class="sb-title">Precio <span class="sb-arrow">−</span></div>
+        <div class="sb-body">
+          <div class="price-row">
+            <input type="number" placeholder="Desde $"/>
+            <span class="price-sep">—</span>
+            <input type="number" placeholder="Hasta $"/>
+          </div>
+          <button class="btn-apply-price">Aplicar</button>
+        </div>
+      </div>
+
+      <button class="btn-clear-filters" id="clearFiltersBtn">✕ Limpiar filtros</button>
+    </aside>
+
+    <!-- ── GRILLA ── -->
+    <div>
+      <div class="prod-grid" id="prodGrid">
+
+        <!-- BANNERS -->
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#e8e0d5"><span class="prod-card__emoji">🏳️</span><div class="prod-card__badge">Top</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Portabanner Simple Tensor 90×190 cm</div><div class="prod-card__sub">Impresión full color · Simple faz</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#dfd8cc"><span class="prod-card__emoji">📐</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Portabanner Doble Tensor 90×190 cm</div><div class="prod-card__sub">Doble faz · Impresión incluida</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#e5ddd0"><span class="prod-card__emoji">🎯</span><div class="prod-card__badge prod-card__badge--pop">Popular</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Portabanner X-Tensor 90×190 cm</div><div class="prod-card__sub">Base con patas · Full color</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#e0d9d0"><span class="prod-card__emoji">📜</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Portabanner Roll Up 85×200 cm</div><div class="prod-card__sub">Enrollable · Práctico y liviano</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#dbd3c8"><span class="prod-card__emoji">🗓️</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Portabanner Fondo de Prensa</div><div class="prod-card__sub">Modular · Varios tamaños</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#e4ddd2"><span class="prod-card__emoji">📌</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Mini Portabanner Mostrador 25×40 cm</div><div class="prod-card__sub">Compacto · Ideal para locales</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#dddad5"><span class="prod-card__emoji">🔄</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Portabanner Doble Faz 90×190 cm</div><div class="prod-card__sub">Doble cara · Máxima visibilidad</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#e0dad5"><span class="prod-card__emoji">⚖️</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Portabanner Base Pesada</div><div class="prod-card__sub">Estabilidad exterior · Resistente</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#dcd8d0"><span class="prod-card__emoji">🗒️</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Portabanner Simple Tensor 60×160 cm</div><div class="prod-card__sub">Tamaño compacto · Fácil armado</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Banners">
+          <div class="prod-card__thumb" style="background:#e0dcd5"><span class="prod-card__emoji">🎪</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Drop Banner</div><div class="prod-card__sub">Colgante · Dinámico · Eventos</div><div class="prod-card__action"><span class="prod-card__tag">Banners</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+
+        <!-- GRÁFICAS -->
+        <div class="prod-card" data-cat="Graficas">
+          <div class="prod-card__thumb" style="background:#d8e0e0"><span class="prod-card__emoji">🪧</span><div class="prod-card__badge prod-card__badge--new">Nuevo</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Banner para Colgar Vertical</div><div class="prod-card__sub">Con arandelas · Lona o vinilo</div><div class="prod-card__action"><span class="prod-card__tag">Gráficas</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Graficas">
+          <div class="prod-card__thumb" style="background:#d9dfe0"><span class="prod-card__emoji">🖼️</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Banner para Colgar Horizontal</div><div class="prod-card__sub">Presentación panorámica</div><div class="prod-card__action"><span class="prod-card__tag">Gráficas</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Graficas">
+          <div class="prod-card__thumb" style="background:#dce0d8"><span class="prod-card__emoji">🟦</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Banner para Colgar Cuadrado</div><div class="prod-card__sub">Formato cuadrado · Llamativo</div><div class="prod-card__action"><span class="prod-card__tag">Gráficas</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Graficas">
+          <div class="prod-card__thumb" style="background:#d8dde0"><span class="prod-card__emoji">🚦</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Carteles para Colgar</div><div class="prod-card__sub">Interior · Doble faz</div><div class="prod-card__action"><span class="prod-card__tag">Gráficas</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+
+        <!-- VIDRIOS -->
+        <div class="prod-card" data-cat="Vidrios">
+          <div class="prod-card__thumb" style="background:#d8dce0"><span class="prod-card__emoji">🪟</span><div class="prod-card__badge">Top</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Decoración de Vidrieras</div><div class="prod-card__sub">Vinilo · Microperforado · Frosty</div><div class="prod-card__action"><span class="prod-card__tag">Vidrios</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Vidrios">
+          <div class="prod-card__thumb" style="background:#d5dde0"><span class="prod-card__emoji">🏢</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Decoración Vidrios en Oficinas</div><div class="prod-card__sub">Privacidad · Branding corporativo</div><div class="prod-card__action"><span class="prod-card__tag">Vidrios</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Vidrios">
+          <div class="prod-card__thumb" style="background:#d8dae0"><span class="prod-card__emoji">🏡</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Decoración Vidrios en el Hogar</div><div class="prod-card__sub">Diseños · Esmerilado · Colores</div><div class="prod-card__action"><span class="prod-card__tag">Vidrios</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+
+        <!-- METRO -->
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#e0d8d5"><span class="prod-card__emoji">📏</span><div class="prod-card__badge prod-card__badge--pop">Popular</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Lona Frontlight</div><div class="prod-card__sub">Por metro · Full color · Exterior</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#ddd8d5"><span class="prod-card__emoji">🌑</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Lona Blackout</div><div class="prod-card__sub">Oscuridad total · Full color</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#e0dbd5"><span class="prod-card__emoji">💡</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Lona Backlight</div><div class="prod-card__sub">Retroiluminado · Cajas de luz</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#dde0d8"><span class="prod-card__emoji">🎨</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Vinilo Autoadhesivo</div><div class="prod-card__sub">Mate · Brillante · Transparente</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#e0ddd8"><span class="prod-card__emoji">👁️</span><div class="prod-card__badge prod-card__badge--new">Nuevo</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Vinilo Microperforado</div><div class="prod-card__sub">Para vidrios · Ver desde adentro</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#dce0dc"><span class="prod-card__emoji">🖼️</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Canvas (Lienzo)</div><div class="prod-card__sub">Alta resolución · Arte y deco</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#e0dce0"><span class="prod-card__emoji">🏳️</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Tela Bandera</div><div class="prod-card__sub">Poliéster · Liviana y resistente</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#e0e0dc"><span class="prod-card__emoji">📄</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Papel Fotográfico</div><div class="prod-card__sub">Alta definición · Colores vivos</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#dce0e0"><span class="prod-card__emoji">🧱</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Papel Obra</div><div class="prod-card__sub">Económico · Uso interior</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#e0dce0"><span class="prod-card__emoji">🛋️</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Cuerina / Ecocuero</div><div class="prod-card__sub">Con jersey · Deco y muebles</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#dde0e0"><span class="prod-card__emoji">🏠</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión WallPaper (Empapelado)</div><div class="prod-card__sub">Para paredes · Diseño exclusivo</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Metro">
+          <div class="prod-card__thumb" style="background:#dde0dd"><span class="prod-card__emoji">💧</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Impresión Tyvek</div><div class="prod-card__sub">Resistente al agua · Outdoor</div><div class="prod-card__action"><span class="prod-card__tag">Por metro</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+
+        <!-- STICKERS -->
+        <div class="prod-card" data-cat="Stickers">
+          <div class="prod-card__thumb" style="background:#e0dce0"><span class="prod-card__emoji">🏷️</span><div class="prod-card__badge">Top</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Calcos / Stickers Corte Recto</div><div class="prod-card__sub">Mate · Brillante · Full color</div><div class="prod-card__action"><span class="prod-card__tag">Stickers</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Stickers">
+          <div class="prod-card__thumb" style="background:#e0dde0"><span class="prod-card__emoji">⭐</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Calcos / Stickers Troquelados</div><div class="prod-card__sub">Con forma personalizada</div><div class="prod-card__action"><span class="prod-card__tag">Stickers</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Stickers">
+          <div class="prod-card__thumb" style="background:#e0e0d8"><span class="prod-card__emoji">✨</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Stickers Dorados / Plateados</div><div class="prod-card__sub">Foil · Premium · Elegantes</div><div class="prod-card__action"><span class="prod-card__tag">Stickers</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+
+        <!-- DIGITAL -->
+        <div class="prod-card" data-cat="Digital">
+          <div class="prod-card__thumb" style="background:#d8e0e0"><span class="prod-card__emoji">📇</span><div class="prod-card__badge prod-card__badge--pop">Popular</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Tarjetas Personales</div><div class="prod-card__sub">Offset · Digital · Plastificado</div><div class="prod-card__action"><span class="prod-card__tag">Digital</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Digital">
+          <div class="prod-card__thumb" style="background:#d8dde0"><span class="prod-card__emoji">📰</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Flyers / Volantes</div><div class="prod-card__sub">A5 · A4 · DL · Full color</div><div class="prod-card__action"><span class="prod-card__tag">Digital</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Digital">
+          <div class="prod-card__thumb" style="background:#d5dce0"><span class="prod-card__emoji">📁</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Carpetas</div><div class="prod-card__sub">Con solapa · Diseño corporativo</div><div class="prod-card__action"><span class="prod-card__tag">Digital</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Digital">
+          <div class="prod-card__thumb" style="background:#d8d8e0"><span class="prod-card__emoji">🧲</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Imán Impreso</div><div class="prod-card__sub">Flexible · Varios tamaños</div><div class="prod-card__action"><span class="prod-card__tag">Digital</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Digital">
+          <div class="prod-card__thumb" style="background:#d5d8e0"><span class="prod-card__emoji">🚗</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Imán Vehicular Impreso</div><div class="prod-card__sub">Para autos · Full color</div><div class="prod-card__action"><span class="prod-card__tag">Digital</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+
+        <!-- PVC -->
+        <div class="prod-card" data-cat="PVC">
+          <div class="prod-card__thumb" style="background:#e0dcd8"><span class="prod-card__emoji">🔲</span><div class="prod-card__badge prod-card__badge--new">Nuevo</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Gráfica sobre Placa PVC Vertical</div><div class="prod-card__sub">Rígida · Resistente · Larga duración</div><div class="prod-card__action"><span class="prod-card__tag">PVC</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="PVC">
+          <div class="prod-card__thumb" style="background:#e0ddd8"><span class="prod-card__emoji">🟫</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Gráfica sobre Placa PVC Horizontal</div><div class="prod-card__sub">Cartelería · Formato apaisado</div><div class="prod-card__action"><span class="prod-card__tag">PVC</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="PVC">
+          <div class="prod-card__thumb" style="background:#dddad8"><span class="prod-card__emoji">🟥</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Gráfica sobre Placa PVC Cuadrada</div><div class="prod-card__sub">Cartelería · Formato cuadrado</div><div class="prod-card__action"><span class="prod-card__tag">PVC</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+
+        <!-- SEÑALÉTICA -->
+        <div class="prod-card" data-cat="Senaletica">
+          <div class="prod-card__thumb" style="background:#e0ddd5"><span class="prod-card__emoji">⚠️</span><div class="prod-card__badge">Top</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Señalética Institucional</div><div class="prod-card__sub">Seguridad · Indicativa · Interior</div><div class="prod-card__action"><span class="prod-card__tag">Señalética</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Senaletica">
+          <div class="prod-card__thumb" style="background:#e0dad5"><span class="prod-card__emoji">🛑</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Cartel de Vereda</div><div class="prod-card__sub">Exterior · Base con pie</div><div class="prod-card__action"><span class="prod-card__tag">Señalética</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Senaletica">
+          <div class="prod-card__thumb" style="background:#ddd8d5"><span class="prod-card__emoji">🖥️</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Display para Mostrador con Pie</div><div class="prod-card__sub">Acrílico · Presentación profesional</div><div class="prod-card__action"><span class="prod-card__tag">Señalética</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+
+        <!-- CUADROS -->
+        <div class="prod-card" data-cat="Cuadros">
+          <div class="prod-card__thumb" style="background:#dde0d8"><span class="prod-card__emoji">🖼️</span><div class="prod-card__badge prod-card__badge--pop">Popular</div></div>
+          <div class="prod-card__info"><div class="prod-card__name">Cuadros en Bastidor Canvas</div><div class="prod-card__sub">Alta resolución · Varios tamaños</div><div class="prod-card__action"><span class="prod-card__tag">Cuadros</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Cuadros">
+          <div class="prod-card__thumb" style="background:#dce0dc"><span class="prod-card__emoji">🌅</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Cuadros en Bastidor – Pinturas</div><div class="prod-card__sub">Reproducciones de arte · HD</div><div class="prod-card__action"><span class="prod-card__tag">Cuadros</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+        <div class="prod-card" data-cat="Cuadros">
+          <div class="prod-card__thumb" style="background:#d8dcd8"><span class="prod-card__emoji">🦁</span></div>
+          <div class="prod-card__info"><div class="prod-card__name">Cuadros en Bastidor – Animales</div><div class="prod-card__sub">Fauna · Naturaleza · Decoración</div><div class="prod-card__action"><span class="prod-card__tag">Cuadros</span><button class="btn-secondary" onclick="navigate('contacto')">Consultar</button></div></div>
+        </div>
+
+      </div><!-- /prod-grid -->
+
+      <div class="pagination">
+        <button class="pg-btn active">1</button>
+        <button class="pg-btn">2</button>
+        <button class="pg-btn">3</button>
+        <button class="pg-btn">›</button>
+      </div>
+    </div><!-- /grid wrapper -->
+
+  </div><!-- /products-layout -->
+</div><!-- /products-page -->

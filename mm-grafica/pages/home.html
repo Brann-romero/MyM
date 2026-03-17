@@ -1,0 +1,211 @@
+<!-- ═══════════════════════════════════════
+     pages/home.html — Contenido de Inicio
+     CSS: css/home.css (cargado por router)
+═══════════════════════════════════════ -->
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero__text">
+    <span class="hero__eyebrow">Impresiones de alta calidad</span>
+    <h1 class="hero__title">Tu marca<br/>en cada<br/><em>superficie</em></h1>
+    <p class="hero__desc">Banners, vinilos, lonas, gráficas montadas y mucho más. Imprimimos tus ideas con la calidad y rapidez que tu negocio necesita.</p>
+    <button class="btn-primary hero__cta" onclick="navigate('productos')">
+      Ver todos los productos →
+    </button>
+  </div>
+  <div class="hero__visual">
+    <div class="hero__pattern"></div>
+    <div class="hero__watermark">G</div>
+    <div class="hero__stats">
+      <div>
+        <div class="hero__stat-num">+10K</div>
+        <div class="hero__stat-label">Clientes</div>
+      </div>
+      <div>
+        <div class="hero__stat-num">24hs</div>
+        <div class="hero__stat-label">Entrega</div>
+      </div>
+      <div>
+        <div class="hero__stat-num">HD</div>
+        <div class="hero__stat-label">Calidad</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORÍAS -->
+<div class="cat-section">
+  <div class="cat-section__header">
+    <div>
+      <span class="label">Nuestras categorías</span>
+      <h2 class="display-title">¿Qué estás buscando?</h2>
+    </div>
+    <button class="btn-outline" onclick="navigate('productos')">Ver todos los productos →</button>
+  </div>
+
+  <div class="cat-grid">
+    <div class="cat-card" style="background:#1a1a1a" onclick="navigate('productos','Banners')">
+      <div class="cat-card__bg"><span class="cat-card__icon">🏳️</span></div>
+      <div class="cat-card__overlay"></div>
+      <div class="cat-card__info">
+        <div class="cat-card__name">Banners &amp; Portabanners</div>
+        <div class="cat-card__desc">Interior · Exterior · Fondo de prensa</div>
+      </div>
+    </div>
+    <div class="cat-card" style="background:#2a2018" onclick="navigate('productos','Vidrios')">
+      <div class="cat-card__bg"><span class="cat-card__icon">🪟</span></div>
+      <div class="cat-card__overlay"></div>
+      <div class="cat-card__info">
+        <div class="cat-card__name">Decoración Vidrios</div>
+        <div class="cat-card__desc">Vidrieras · Oficinas · Hogar</div>
+      </div>
+    </div>
+    <div class="cat-card" style="background:#18201a" onclick="navigate('productos','Metro')">
+      <div class="cat-card__bg"><span class="cat-card__icon">🖨️</span></div>
+      <div class="cat-card__overlay"></div>
+      <div class="cat-card__info">
+        <div class="cat-card__name">Impresión por Metro</div>
+        <div class="cat-card__desc">Lonas · Vinilos · Telas · Canvas</div>
+      </div>
+    </div>
+    <div class="cat-card" style="background:#201520" onclick="navigate('productos','Stickers')">
+      <div class="cat-card__bg"><span class="cat-card__icon">🏷️</span></div>
+      <div class="cat-card__overlay"></div>
+      <div class="cat-card__info">
+        <div class="cat-card__name">Stickers &amp; Calcos</div>
+        <div class="cat-card__desc">Troquelados · Corte recto · Dorados</div>
+      </div>
+    </div>
+    <div class="cat-card" style="background:#1a1520" onclick="navigate('productos','Digital')">
+      <div class="cat-card__bg"><span class="cat-card__icon">📋</span></div>
+      <div class="cat-card__overlay"></div>
+      <div class="cat-card__info">
+        <div class="cat-card__name">Impresión Digital</div>
+        <div class="cat-card__desc">Tarjetas · Folletos · Carpetas</div>
+      </div>
+    </div>
+    <div class="cat-card" style="background:#201818" onclick="navigate('productos','Cuadros')">
+      <div class="cat-card__bg"><span class="cat-card__icon">🖼️</span></div>
+      <div class="cat-card__overlay"></div>
+      <div class="cat-card__info">
+        <div class="cat-card__name">Cuadros &amp; PVC</div>
+        <div class="cat-card__desc">Bastidor · Gráficas montadas</div>
+      </div>
+    </div>
+    <div class="cat-card" style="background:#181a20" onclick="navigate('productos','Senaletica')">
+      <div class="cat-card__bg"><span class="cat-card__icon">⚠️</span></div>
+      <div class="cat-card__overlay"></div>
+      <div class="cat-card__info">
+        <div class="cat-card__name">Señalética</div>
+        <div class="cat-card__desc">Comunicación visual institucional</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CÓMO FUNCIONA -->
+<section class="how-section">
+  <div class="how-inner">
+    <div class="how-header">
+      <span class="label" style="color:var(--accent2)">¿Cómo funciona?</span>
+      <h2 class="display-title" style="color:var(--white)">Del diseño a tus manos</h2>
+    </div>
+    <div class="how-grid">
+      <div class="how-card">
+        <div class="how-card__num">01</div>
+        <div class="how-card__icon">🎨</div>
+        <div class="how-card__title">Elegí tu producto</div>
+        <p class="how-card__desc">Navegá nuestro catálogo y seleccioná el material, formato y terminación que necesitás.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-card__num">02</div>
+        <div class="how-card__icon">📁</div>
+        <div class="how-card__title">Enviá tu arte</div>
+        <p class="how-card__desc">Subí tu archivo o pedinos diseño. Revisamos y confirmamos antes de imprimir.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-card__num">03</div>
+        <div class="how-card__icon">⚡</div>
+        <div class="how-card__title">Producción express</div>
+        <p class="how-card__desc">Imprimimos con equipos de última generación. Entregas en 24/48 hs en CABA y GBA.</p>
+      </div>
+      <div class="how-card">
+        <div class="how-card__num">04</div>
+        <div class="how-card__icon">📦</div>
+        <div class="how-card__title">Recibí o retirá</div>
+        <p class="how-card__desc">Enviamos a todo el país o pasá a retirar por nuestro local. ¡Listo para usar!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DESTACADOS -->
+<div class="featured-section">
+  <div class="featured-section__header">
+    <div>
+      <span class="label">Los más pedidos</span>
+      <h2 class="display-title">Productos destacados</h2>
+    </div>
+    <button class="btn-outline" onclick="navigate('productos')">Ver todos →</button>
+  </div>
+  <div class="feat-grid">
+    <div class="feat-card">
+      <div class="feat-card__thumb" style="background:#e8e0d5">
+        <span class="feat-card__emoji">🏳️</span>
+        <div class="feat-card__badge">Top</div>
+      </div>
+      <div class="feat-card__info">
+        <div class="feat-card__name">Portabanner Simple Tensor 90×190</div>
+        <div class="feat-card__sub">Impresión full color · Simple faz</div>
+        <div class="feat-card__action">
+          <button class="btn-secondary" onclick="navigate('contacto')">Consultar</button>
+        </div>
+      </div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card__thumb" style="background:#e0d8d5">
+        <span class="feat-card__emoji">📏</span>
+        <div class="feat-card__badge feat-card__badge--pop">Popular</div>
+      </div>
+      <div class="feat-card__info">
+        <div class="feat-card__name">Impresión Lona Frontlight</div>
+        <div class="feat-card__sub">Por metro · Full color · Exterior</div>
+        <div class="feat-card__action">
+          <button class="btn-secondary" onclick="navigate('contacto')">Consultar</button>
+        </div>
+      </div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card__thumb" style="background:#e0dce0">
+        <span class="feat-card__emoji">🏷️</span>
+      </div>
+      <div class="feat-card__info">
+        <div class="feat-card__name">Stickers Troquelados con Forma</div>
+        <div class="feat-card__sub">Mate · Brillante · Dorado</div>
+        <div class="feat-card__action">
+          <button class="btn-secondary" onclick="navigate('contacto')">Consultar</button>
+        </div>
+      </div>
+    </div>
+    <div class="feat-card">
+      <div class="feat-card__thumb" style="background:#d8e0e0">
+        <span class="feat-card__emoji">📇</span>
+        <div class="feat-card__badge feat-card__badge--new">Nuevo</div>
+      </div>
+      <div class="feat-card__info">
+        <div class="feat-card__name">Tarjetas Personales</div>
+        <div class="feat-card__sub">Offset · Digital · Plastificado</div>
+        <div class="feat-card__action">
+          <button class="btn-secondary" onclick="navigate('contacto')">Consultar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- CTA -->
+<section class="cta-banner">
+  <h2 class="cta-banner__title">¿Tenés un proyecto?<br/>Pedí tu presupuesto</h2>
+  <p class="cta-banner__sub">Trabajamos con empresas, agencias y particulares. Precios mayoristas y entregas express en todo el país.</p>
+  <button class="cta-banner__btn" onclick="navigate('contacto')">Contactarnos ahora</button>
+</section>

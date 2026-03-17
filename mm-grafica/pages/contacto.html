@@ -1,0 +1,152 @@
+<!-- ═══════════════════════════════════════════════
+     pages/contacto.html
+     CSS: css/contacto.css · JS: js/contacto.js
+═══════════════════════════════════════════════ -->
+
+<div class="contact-page">
+
+  <div class="breadcrumb">
+    <span class="bc-link" onclick="navigate('home')">Inicio</span>
+    <span>›</span>
+    <span class="bc-cur">Contacto</span>
+  </div>
+
+  <span class="label">Hablemos</span>
+  <h1 class="display-title">Contacto</h1>
+
+  <!-- ── GRID: info izquierda · formulario derecha ── -->
+  <div class="contact-grid">
+
+    <div class="contact-info">
+      <h2 class="contact-info__title">¿Cómo podemos<br/><em>ayudarte?</em></h2>
+      <p class="contact-info__intro">
+        Envianos tu consulta, presupuesto o arte y te respondemos a la brevedad.
+        Nuestro equipo está disponible de lunes a viernes de 9 a 18 hs y sábados de 9 a 13 hs.
+      </p>
+
+      <div class="contact-item">
+        <div class="contact-item__icon">💬</div>
+        <div>
+          <span class="contact-item__label">WhatsApp</span>
+          <div class="contact-item__val">+54 9 11 3831-2154</div>
+          <div class="contact-item__sub">Respuesta rápida · Podés adjuntar tu arte</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item__icon">✉️</div>
+        <div>
+          <span class="contact-item__label">Email</span>
+          <div class="contact-item__val">info@mmgrafica.com.ar</div>
+          <div class="contact-item__sub">Respondemos en menos de 24 hs hábiles</div>
+        </div>
+      </div>
+
+      <div class="contact-item">
+        <div class="contact-item__icon">📍</div>
+        <div>
+          <span class="contact-item__label">Dirección</span>
+          <div class="contact-item__val">Av. Pte. Perón 3899 - Local 7</div>
+          <div class="contact-item__sub">A. Korn, Buenos Aires, Argentina</div>
+        </div>
+      </div>
+
+      <div class="schedule-box">
+        <span class="schedule-box__title">Horarios de atención</span>
+        <div class="schedule-row">
+          <span class="schedule-row__day">Lunes a Viernes</span>
+          <span class="schedule-row__hours">9:00 – 18:00 hs</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-row__day">Sábados</span>
+          <span class="schedule-row__hours">9:00 – 13:00 hs</span>
+        </div>
+        <div class="schedule-row">
+          <span class="schedule-row__day">Domingos</span>
+          <span class="schedule-row__closed">Cerrado</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="contact-form-wrap">
+        <div class="form-wrap__title">Envianos tu consulta</div>
+        <div class="form-wrap__subtitle">Completá el formulario y te respondemos a la brevedad.</div>
+
+        <form id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fname">Nombre *</label>
+              <input type="text" id="fname" name="nombre" placeholder="Tu nombre" required/>
+            </div>
+            <div class="form-group">
+              <label for="lname">Apellido *</label>
+              <input type="text" id="lname" name="apellido" placeholder="Tu apellido" required/>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" placeholder="tu@email.com" required/>
+            </div>
+            <div class="form-group">
+              <label for="phone">Teléfono</label>
+              <input type="tel" id="phone" name="telefono" placeholder="011 XXXX-XXXX"/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="product">Producto de interés</label>
+            <select id="product" name="producto">
+              <option value="">Seleccioná un producto…</option>
+              <option>Banners con portabanner</option>
+              <option>Gráficas para colgar</option>
+              <option>Decoración de vidrios</option>
+              <option>Gráficas montadas en PVC</option>
+              <option>Señalética / Comunicación</option>
+              <option>Impresión por metro</option>
+              <option>Stickers / Calcos</option>
+              <option>Impresión digital</option>
+              <option>Cuadros</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="msg">Mensaje *</label>
+            <textarea id="msg" name="mensaje" placeholder="Contanos sobre tu proyecto: medidas, cantidad, materiales, fecha de entrega…" required></textarea>
+          </div>
+          <button type="submit" class="btn-send" id="sendBtn">
+            Enviar consulta <span class="arrow">→</span>
+          </button>
+          <div class="form-success" id="formSuccess">
+            ✔ ¡Mensaje enviado! Te respondemos a la brevedad.
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div><!-- /contact-grid -->
+
+  <!-- ── MAPA ancho completo debajo del grid ── -->
+  <div class="map-box">
+    <iframe
+      src="https://maps.google.com/maps?q=Av.+Pte.+Per%C3%B3n+3899,+Alejandro+Korn,+Buenos+Aires,+Argentina&t=&z=16&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;display:block;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Ubicación M&M Gráfica"
+    ></iframe>
+  </div>
+
+  <!-- ── CTA ── -->
+  <section class="cta-banner" style="margin-top:64px">
+    <h2 class="cta-banner__title">¿Necesitás una cotización rápida?</h2>
+    <p class="cta-banner__sub">Escribinos por WhatsApp y te respondemos al instante con precios y tiempos de entrega.</p>
+    <a class="cta-banner__btn" href="https://wa.me/5491138312154" target="_blank" rel="noopener">
+      Abrir WhatsApp →
+    </a>
+  </section>
+
+</div><!-- /contact-page -->

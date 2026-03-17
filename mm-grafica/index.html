@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>M&M Gráfica — Impresiones de Alta Calidad</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+
+  <!-- CSS global (siempre cargado) -->
+  <link rel="stylesheet" href="css/global.css"/>
+
+  <!-- Favicon emoji -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖨️</text></svg>"/>
+</head>
+<body>
+
+  <!-- ── Header y topbar (inyectado por main.js) ── -->
+  <div id="site-header"></div>
+
+  <!-- ── Contenido de página (cambia con el router) ── -->
+  <main id="page-content" aria-live="polite"></main>
+
+  <!-- ── Footer y newsletter (inyectado por main.js) ── -->
+  <div id="site-footer"></div>
+
+  <!-- JS: módulos de página -->
+  <script src="js/productos.js"></script>
+  <script src="js/contacto.js"></script>
+
+  <!-- JS: router principal (carga al final) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
