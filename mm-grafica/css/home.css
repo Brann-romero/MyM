@@ -122,35 +122,38 @@
   aspect-ratio: 1;
   overflow: hidden;
   cursor: pointer;
+  background: var(--black);
 }
 .cat-card:first-child {
   grid-column: span 2;
   grid-row: span 2;
   aspect-ratio: auto;
 }
-.cat-card__bg {
+
+/* Imagen real de fondo */
+.cat-card__img {
   position: absolute;
   inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform .4s ease;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .5s ease, filter .3s ease;
+  filter: brightness(.75);
 }
-.cat-card:hover .cat-card__bg { transform: scale(1.06); }
-.cat-card__icon {
-  font-size: clamp(44px, 7vw, 78px);
-  opacity: .14;
-  transition: opacity .3s;
+.cat-card:hover .cat-card__img {
+  transform: scale(1.06);
+  filter: brightness(.55);
 }
-.cat-card:hover .cat-card__icon { opacity: .26; }
+
 .cat-card__overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(13,13,13,.74) 0%, transparent 60%);
+  background: linear-gradient(to top, rgba(13,13,13,.82) 0%, rgba(13,13,13,.1) 55%, transparent 100%);
   transition: background .3s;
 }
 .cat-card:hover .cat-card__overlay {
-  background: linear-gradient(to top, rgba(212,64,26,.78) 0%, transparent 55%);
+  background: linear-gradient(to top, rgba(212,64,26,.72) 0%, rgba(13,13,13,.2) 55%, transparent 100%);
 }
 .cat-card__info {
   position: absolute;
@@ -246,21 +249,26 @@
   background: var(--cream);
   overflow: hidden;
   cursor: pointer;
-  transition: box-shadow var(--transition);
+  transition: box-shadow var(--transition), transform .2s;
 }
-.feat-card:hover { box-shadow: var(--shadow-card); }
+.feat-card:hover {
+  box-shadow: var(--shadow-card);
+  transform: translateY(-3px);
+}
 .feat-card__thumb {
   aspect-ratio: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 58px;
   position: relative;
-  transition: filter .3s;
+  overflow: hidden;
+  background: var(--light-gray);
 }
-.feat-card:hover .feat-card__thumb { filter: brightness(.93); }
-.feat-card__emoji { transition: transform .4s; display: block; }
-.feat-card:hover .feat-card__emoji { transform: scale(1.1) rotate(-5deg); }
+.feat-card__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform .4s ease;
+}
+.feat-card:hover .feat-card__thumb img { transform: scale(1.06); }
 .feat-card__badge {
   position: absolute;
   top: 10px; left: 10px;

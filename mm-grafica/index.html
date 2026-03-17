@@ -12,8 +12,8 @@
   <!-- CSS global (siempre cargado) -->
   <link rel="stylesheet" href="css/global.css"/>
 
-  <!-- Favicon emoji -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🖨️</text></svg>"/>
+  <!-- Favicon real -->
+  <link rel="icon" type="image/jpeg" href="img/logo/logo-pestana.jpeg"/>
 </head>
 <body>
 
@@ -25,6 +25,28 @@
 
   <!-- ── Footer y newsletter (inyectado por main.js) ── -->
   <div id="site-footer"></div>
+
+
+  <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contacto"/>
+    <input type="text" name="nombre"/>
+    <input type="text" name="apellido"/>
+    <input type="email" name="email"/>
+    <input type="tel" name="telefono"/>
+    <select name="producto">
+      <option>Carteles</option>
+      <option>Estructuras</option>
+      <option>Remeras</option>
+      <option>Talonarios</option>
+      <option>Tarjetas</option>
+      <option>Libretas</option>
+      <option>Etiquetas</option>
+      <option>Carpetas de Presentación</option>
+      <option>Vinilos</option>
+      <option>Otro</option>
+    </select>
+    <textarea name="mensaje"></textarea>
+  </form>
 
   <!-- JS: módulos de página -->
   <script src="js/productos.js"></script>

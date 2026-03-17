@@ -13,23 +13,22 @@ const HEADER_HTML = `
 <header class="site-header">
   <div class="header-inner">
     <div class="site-logo" onclick="navigate('home')">
-      <span class="site-logo__main">M&amp;M</span>
-      <span class="site-logo__sub">Gráfica &amp; Publicidad</span>
+      <img src="img/logo/ProImagen.png" alt="M&M Gráfica" class="site-logo__img"/>
     </div>
     <nav class="site-nav">
       <button class="nav-link" id="nav-home" onclick="navigate('home')">Inicio</button>
       <div class="nav-dropdown">
         <button class="nav-link" id="nav-productos" onclick="navigate('productos')">Productos ▾</button>
         <div class="nav-dropdown__menu">
-          <button onclick="navigate('productos','Banners')">Banners con portabanner</button>
-          <button onclick="navigate('productos','Graficas')">Gráficas para colgar</button>
-          <button onclick="navigate('productos','Vidrios')">Decoración de vidrios</button>
-          <button onclick="navigate('productos','PVC')">Gráficas montadas en PVC</button>
-          <button onclick="navigate('productos','Senaletica')">Señalética / Comunicación</button>
-          <button onclick="navigate('productos','Metro')">Impresión por metro</button>
-          <button onclick="navigate('productos','Stickers')">Stickers / Calcos</button>
-          <button onclick="navigate('productos','Digital')">Impresión digital</button>
-          <button onclick="navigate('productos','Cuadros')">Cuadros</button>
+          <button onclick="navigate('productos','carteles')">Carteles</button>
+          <button onclick="navigate('productos','estructuras')">Estructuras</button>
+          <button onclick="navigate('productos','remeras')">Remeras</button>
+          <button onclick="navigate('productos','talonarios')">Talonarios</button>
+          <button onclick="navigate('productos','tarjetas')">Tarjetas</button>
+          <button onclick="navigate('productos','libretas')">Libretas</button>
+          <button onclick="navigate('productos','etiquetas')">Etiquetas</button>
+          <button onclick="navigate('productos','carpetas')">Carpetas de Presentación</button>
+          <button onclick="navigate('productos','vinilos')">Vinilos</button>
         </div>
       </div>
       <button class="nav-link" id="nav-contacto" onclick="navigate('contacto')">Contacto</button>
@@ -43,19 +42,21 @@ const FOOTER_HTML = `
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="footer-logo__main">M&amp;M</div>
-        <div class="footer-logo__sub">Gráfica &amp; Publicidad</div>
+        <img src="img/logo/ProImagen.png" alt="M&M Gráfica" class="footer-logo__img"/>
         <p>Impresiones de alta calidad para empresas, agencias y profesionales. Desde Buenos Aires para todo el país.</p>
       </div>
       <div class="footer-col">
         <h4>Productos</h4>
         <ul>
-          <li><a onclick="navigate('productos','Banners')">Banners</a></li>
-          <li><a onclick="navigate('productos','Metro')">Lonas y vinilos</a></li>
-          <li><a onclick="navigate('productos','Stickers')">Stickers</a></li>
-          <li><a onclick="navigate('productos','Digital')">Impresión digital</a></li>
-          <li><a onclick="navigate('productos','Cuadros')">Cuadros</a></li>
-          <li><a onclick="navigate('productos','Senaletica')">Señalética</a></li>
+          <li><a onclick="navigate('productos','carteles')">Carteles</a></li>
+          <li><a onclick="navigate('productos','estructuras')">Estructuras</a></li>
+          <li><a onclick="navigate('productos','remeras')">Remeras</a></li>
+          <li><a onclick="navigate('productos','talonarios')">Talonarios</a></li>
+          <li><a onclick="navigate('productos','tarjetas')">Tarjetas</a></li>
+          <li><a onclick="navigate('productos','libretas')">Libretas</a></li>
+          <li><a onclick="navigate('productos','etiquetas')">Etiquetas</a></li>
+          <li><a onclick="navigate('productos','carpetas')">Carpetas de Presentación</a></li>
+          <li><a onclick="navigate('productos','vinilos')">Vinilos</a></li>
         </ul>
       </div>
       <div class="footer-col">
@@ -71,7 +72,7 @@ const FOOTER_HTML = `
       <div class="footer-col">
         <h4>Contacto</h4>
         <div class="footer-contact-item">📱 <span><strong>WhatsApp</strong> +54 9 11 3831-2154</span></div>
-        <div class="footer-contact-item">✉️ <span>info@mmgrafica.com.ar</span></div>
+        <div class="footer-contact-item">✉️ <span>mtsolucionesgraficas22@gmail.com</span></div>
         <div class="footer-contact-item">📍 <span>Av. Pte. Perón 3899 - Local 7, A. Korn</span></div>
       </div>
     </div>
@@ -152,7 +153,7 @@ async function navigate(pageId, filter = null) {
   currentPage = pageId;
 
   // Inicializar funciones de página
-  if (pageId === 'productos') setTimeout(() => initProductos(filter), 50);
+  if (pageId === 'productos') initProductos(filter);
   if (pageId === 'contacto')  setTimeout(() => initContacto(), 50);
 }
 

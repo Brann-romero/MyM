@@ -37,7 +37,7 @@
         <div class="contact-item__icon">✉️</div>
         <div>
           <span class="contact-item__label">Email</span>
-          <div class="contact-item__val">info@mmgrafica.com.ar</div>
+          <div class="contact-item__val">mtsolucionesgraficas22@gmail.com</div>
           <div class="contact-item__sub">Respondemos en menos de 24 hs hábiles</div>
         </div>
       </div>
@@ -73,7 +73,11 @@
         <div class="form-wrap__title">Envianos tu consulta</div>
         <div class="form-wrap__subtitle">Completá el formulario y te respondemos a la brevedad.</div>
 
-        <form id="contactForm" novalidate>
+        <form id="contactForm" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" novalidate>
+          <input type="hidden" name="form-name" value="contacto"/>
+          <p class="hidden" style="display:none">
+            <label>No completar este campo: <input name="bot-field"/></label>
+          </p>
           <div class="form-row">
             <div class="form-group">
               <label for="fname">Nombre *</label>
@@ -98,15 +102,15 @@
             <label for="product">Producto de interés</label>
             <select id="product" name="producto">
               <option value="">Seleccioná un producto…</option>
-              <option>Banners con portabanner</option>
-              <option>Gráficas para colgar</option>
-              <option>Decoración de vidrios</option>
-              <option>Gráficas montadas en PVC</option>
-              <option>Señalética / Comunicación</option>
-              <option>Impresión por metro</option>
-              <option>Stickers / Calcos</option>
-              <option>Impresión digital</option>
-              <option>Cuadros</option>
+              <option>Carteles</option>
+              <option>Estructuras</option>
+              <option>Remeras</option>
+              <option>Talonarios</option>
+              <option>Tarjetas</option>
+              <option>Libretas</option>
+              <option>Etiquetas</option>
+              <option>Carpetas de Presentación</option>
+              <option>Vinilos</option>
               <option>Otro</option>
             </select>
           </div>
@@ -119,6 +123,9 @@
           </button>
           <div class="form-success" id="formSuccess">
             ✔ ¡Mensaje enviado! Te respondemos a la brevedad.
+          </div>
+          <div class="form-success" id="formError" style="display:none">
+            Ocurrió un error al enviar la consulta. Probá de nuevo o escribinos a mtsolucionesgraficas22@gmail.com.
           </div>
         </form>
       </div>

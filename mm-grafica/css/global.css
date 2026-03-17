@@ -162,11 +162,19 @@ input, select, textarea { font-family: var(--fb); }
 /* Logo */
 .site-logo {
   display: flex;
-  flex-direction: column;
-  line-height: 1;
+  align-items: center;
   cursor: pointer;
   flex-shrink: 0;
 }
+.site-logo__img {
+  height: 48px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  transition: opacity var(--transition);
+}
+.site-logo:hover .site-logo__img { opacity: .8; }
+/* Logo texto fallback */
 .site-logo__main {
   font-family: var(--fd);
   font-size: 40px;
@@ -182,6 +190,16 @@ input, select, textarea { font-family: var(--fb); }
   font-weight: 500;
 }
 .site-logo:hover .site-logo__main { color: var(--accent); }
+/* Logo footer */
+.footer-logo__img {
+  height: 50px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  margin-bottom: 14px;
+  filter: brightness(0) invert(1);
+  opacity: .85;
+}
 
 /* Nav */
 .site-nav {
