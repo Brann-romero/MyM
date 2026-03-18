@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pro imagen</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet"/>
+
+  <!-- CSS global (siempre cargado) -->
+  <link rel="stylesheet" href="css/global.css"/>
+
+  <!-- Favicon real -->
+  <link rel="icon" type="image/jpeg" href="img/logo/logo-pestana.jpeg"/>
+</head>
+<body>
+
+  <!-- ── Header y topbar (inyectado por main.js) ── -->
+  <div id="site-header"></div>
+
+  <!-- ── Contenido de página (cambia con el router) ── -->
+  <main id="page-content" aria-live="polite"></main>
+
+  <!-- ── Footer y newsletter (inyectado por main.js) ── -->
+  <div id="site-footer"></div>
+
+
+  <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contacto"/>
+    <input type="text" name="nombre"/>
+    <input type="text" name="apellido"/>
+    <input type="email" name="email"/>
+    <input type="tel" name="telefono"/>
+    <select name="producto">
+      <option>Carteles</option>
+      <option>Estructuras</option>
+      <option>Remeras, Buzos y Camperas Personalizadas</option>
+      <option>Remera Lisa</option>
+      <option>Talonarios</option>
+      <option>Tarjetas</option>
+      <option>Etiquetas</option>
+      <option>Letras Corporea</option>
+      <option>Vinilos</option>
+      <option>Otro</option>
+    </select>
+    <textarea name="mensaje"></textarea>
+  </form>
+
+  <!-- JS: módulos de página -->
+  <script src="js/productos.js"></script>
+  <script src="js/contacto.js"></script>
+
+  <!-- JS: router principal (carga al final) -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>
